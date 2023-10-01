@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply text-sm text-zinc-300;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+body {
+  @apply bg-gray-700;
+}
+
+#header {
+  @apply flex gap-24 bg-gray-600 min-w-fit px-10 py-5 shadow-lg;
+}
+
+.nav {
+  @apply flex gap-7;
+
+  & .navItem {
+    @apply text-base font-medium tracking-widest indent-px whitespace-nowrap hover:text-white;
+
+    &.active {
+      @apply relative;
+
+      &::before {
+        @apply absolute top-2 left-0 w-full h-full border-b-2 border-solid border-yellow-300;
+        content: '';
+      }
+    }
+  }
+}
+
+#main {
+  @apply py-10;
+}
+
+.btnGroup {
+  @apply flex gap-0;
+}
+
+.btn {
+  @apply text-white tracking-widest indent-px px-4 py-2;
+
+  &.btnBlue {
+    @apply bg-gradient-to-b from-sky-600 to-sky-800;
+  }
+
+  &:hover {
+    @apply opacity-90;
+  }
+
+  &:active {
+    @apply opacity-80;
+  }
+}
+
+.listGroup {
+  @apply bg-gray-600 w-96 shadow;
+
+  & .listGroupItem {
+    @apply flex gap-8 items-center px-5 py-3 cursor-pointer;
+
+    &:hover {
+      @apply bg-sky-900;
+    }
+  }
+}
+
+.formGroup {
+  @apply flex gap-0 items-stretch;
+
+  & .formGroupText {
+    @apply flex items-center bg-gradient-to-b from-zinc-500 to-zinc-600 px-4 text-white tracking-widest indent-px;
+  }
+
+  & .formGroupSelect {
+    @apply form-select border-0 text-black;
+
+    & option {
+      @apply text-black;
+    }
+  }
+}
+
+.circleTab {
+  @apply w-16 h-16 border-b-2 border-zinc-500 rounded-full flex justify-center items-center text-base font-medium tracking-widest indent-px
+}
