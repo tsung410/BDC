@@ -59,7 +59,7 @@ body {
 }
 
 .listGroup {
-  @apply bg-gray-600 w-96 shadow;
+  @apply bg-gray-600 w-96 shadow-lg;
 
   & .listGroupItem {
     @apply flex gap-8 items-center px-5 py-3 cursor-pointer;
@@ -87,5 +87,55 @@ body {
 }
 
 .circleTab {
-  @apply w-16 h-16 border-b-2 border-zinc-500 rounded-full flex justify-center items-center text-base font-medium tracking-widest indent-px
+  @apply relative flex justify-center items-center rounded-full text-base font-medium tracking-widest indent-px w-16 h-16
+  shadow-[5px_5px_10px_rgb(25,35,45),-5px_-5px_10px_rgb(45,55,65),inset_5px_5px_10px_rgb(85,95,105),inset_-10px_-10px_15px_rgb(85,95,105)];
+
+  &::before {
+    @apply absolute top-3 left-2 bg-gray-500 rounded-full w-3 h-2 -rotate-45;
+    content: ''; 
+  }
+
+  &:has(:checked) {
+    @apply bg-sky-800 text-white
+    shadow-[5px_5px_10px_rgb(77,118,184),-5px_-5px_10px_rgba(77,118,184),inset_5px_5px_10px_rgb(97,138,204),inset_-10px_-10px_15px_rgb(97,138,204)];
+
+    &::before {
+      @apply bg-gray-300;
+    }
+  }
+}
+
+.tab {
+  @apply relative text-base font-medium tracking-widest indent-px;
+
+  &:has(:checked) {
+    @apply text-white;
+    text-shadow: 0 0 15px #bae6fd;
+
+    &::before {
+      @apply absolute top-8 left-0 bg-cyan-300 w-full h-1 shadow-[0_0_15px_#bae6fd];
+      content: '';
+    }
+  }
+}
+
+.table {
+  @apply relative;
+
+  & thead {
+    @apply bg-gray-600 sticky top-0;
+
+    &::before {
+      @apply absolute bottom-0 border-b-2 border-gray-500 w-full h-full -z-10;
+      content: '';
+    }
+
+    & th {
+      @apply tracking-widest indent-px py-3;
+    }
+  }
+
+  & :is(th, td) {
+    @apply p-2;
+  }
 }

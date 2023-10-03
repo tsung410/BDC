@@ -180,12 +180,48 @@
 
       <!-- 中間資料區 -->
       <div class="flex flex-col gap-5">
-        <div class="flex gap-7 items-center">
+
+        <!-- 遊戲切換 -->
+        <div class="flex gap-7 items-center mb-3">
           <label class="circleTab" role="button"><input type="radio" name="gameType" id="" class="hidden" checked>全部</label>
           <label class="circleTab" role="button"><input type="radio" name="gameType" id="" class="hidden">539</label>
           <label class="circleTab" role="button"><input type="radio" name="gameType" id="" class="hidden">大樂</label>
           <label class="circleTab" role="button"><input type="radio" name="gameType" id="" class="hidden">六合</label>
           <label class="circleTab" role="button"><input type="radio" name="gameType" id="" class="hidden">加州</label>
+        </div>
+
+        <!-- 資料類型切換 -->
+        <div class="flex gap-7 item-center">
+          <label class="tab" role="button"><input type="radio" name="dataType" id="" class="hidden" checked>電腦版</label>
+          <label class="tab" role="button"><input type="radio" name="dataType" id="" class="hidden">支數統計</label>
+          <label class="tab" role="button"><input type="radio" name="dataType" id="" class="hidden">下層限支</label>
+          <label class="tab" role="button"><input type="radio" name="dataType" id="" class="hidden">各類結果</label>
+          <label class="tab" role="button"><input type="radio" name="dataType" id="" class="hidden">電腦佔成</label>
+          <label class="tab" role="button"><input type="radio" name="dataType" id="" class="hidden">包牌</label>
+        </div>
+
+        <!-- 資料表 -->
+        <div class="bg-gray-600 p-3 shadow-lg">
+          <div class="overflow-auto">
+            <table class="table w-full">
+              <thead>
+                <tr>
+                  <th>下層</th>
+                  <th>總計</th>
+                  <th>中獎</th>
+                  <th>輸贏</th>
+                  <th>客戶小計</th>
+                  <th>代理小計</th>
+                  <th>總代理小計</th>
+                  <th>股東小計</th>
+                  <th>大股東小計</th>
+                  <th>總監小計</th>
+                  <th>個人所得</th>
+                  <th>水差</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
         </div>
       </div>
 
