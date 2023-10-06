@@ -744,12 +744,40 @@ select{
   height: 0.5rem;
 }
 
+.h-\[660px\]{
+  height: 660px;
+}
+
 .h-full{
   height: 100%;
 }
 
+.h-\[800px\]{
+  height: 800px;
+}
+
+.h-\[750px\]{
+  height: 750px;
+}
+
+.h-\[700px\]{
+  height: 700px;
+}
+
+.h-\[740px\]{
+  height: 740px;
+}
+
 .w-2{
   width: 0.5rem;
+}
+
+.w-\[450px\]{
+  width: 450px;
+}
+
+.w-\[950px\]{
+  width: 950px;
 }
 
 .w-full{
@@ -787,8 +815,12 @@ select{
   justify-content: center;
 }
 
-.gap-20{
-  gap: 5rem;
+.gap-14{
+  gap: 3.5rem;
+}
+
+.gap-3{
+  gap: 0.75rem;
 }
 
 .gap-5{
@@ -801,6 +833,10 @@ select{
 
 .overflow-auto{
   overflow: auto;
+}
+
+.whitespace-nowrap{
+  white-space: nowrap;
 }
 
 .rounded-full{
@@ -822,13 +858,13 @@ select{
   background-color: rgb(125 211 252 / var(--tw-bg-opacity));
 }
 
-.p-3{
-  padding: 0.75rem;
-}
-
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+.text-center{
+  text-align: center;
 }
 
 .indent-px{
@@ -875,6 +911,30 @@ select{
   --tw-text-opacity: 1;
   color: rgb(212 212 216 / var(--tw-text-opacity));
   font-family: 'Noto Sans TC', sans-serif;
+  &::-webkit-scrollbar{
+    height: 0.75rem;
+  }
+  &::-webkit-scrollbar{
+    width: 0.75rem;
+  }
+  &::-webkit-scrollbar{
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  }
+  &::-webkit-scrollbar-thumb{
+    --tw-gradient-from: transparent var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+  &::-webkit-scrollbar-thumb{
+    --tw-gradient-to: rgb(107 114 128 / 0)  var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), #6b7280 var(--tw-gradient-via-position), var(--tw-gradient-to);
+  }
+  &::-webkit-scrollbar-thumb{
+    --tw-gradient-to: transparent var(--tw-gradient-to-position);
+  }
 }
 
 body{
@@ -959,6 +1019,8 @@ body{
 }
 
 #main{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
@@ -1020,8 +1082,8 @@ body{
     padding-right: 1.25rem;
   }
   & .listGroupItem{
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
   & .listGroupItem {
     &:hover{
@@ -1216,7 +1278,7 @@ body{
       left: 0px;
     }
     &::before{
-      height: 0.25rem;
+      height: 0.125rem;
     }
     &::before{
       width: 100%;
@@ -1236,13 +1298,18 @@ body{
   }
 }
 
-.table{
-  position: relative;
+.table {
   & thead{
     position: sticky;
   }
   & thead{
     top: 0px;
+  }
+  & thead{
+    height: 3rem;
+  }
+  & thead{
+    white-space: nowrap;
   }
   & thead{
     --tw-bg-opacity: 1;
@@ -1251,6 +1318,9 @@ body{
   & thead {
     &::before{
       position: absolute;
+    }
+    &::before{
+      left: 0px;
     }
     &::before{
       bottom: 0px;
@@ -1265,7 +1335,7 @@ body{
       width: 100%;
     }
     &::before{
-      border-bottom-width: 2px;
+      border-bottom-width: 1px;
     }
     &::before{
       --tw-border-opacity: 1;
@@ -1285,7 +1355,16 @@ body{
       letter-spacing: 0.1em;
     }
   }
+  & tbody tr:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgb(12 74 110 / var(--tw-bg-opacity));
+  }
   & :is(th, td){
-    padding: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  & :is(th, td){
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 }
